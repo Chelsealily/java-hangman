@@ -77,6 +77,7 @@ public class Commands {
             playAgain = false;
             dash = new String(new char[word.length()]).replace("\0", "_");
         } else {
+            System.out.println("!! See you later !!");
             return;
         }
 
