@@ -21,6 +21,9 @@ public class Words {
         words.add("DO");
         words.add("ZOOLOGY");
         words.add("TECHNOLOGY");
+        words.add("TEEPEE");
+        words.add("YOYO");
+        words.add("ION");
     }
     public static String generateWord() {
         return words.get((int) (Math.random() * (words.size())));
