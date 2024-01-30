@@ -4,13 +4,17 @@ import static org.example.Words.generateWord;
 
 public class Commands {
     protected static String word = generateWord();
+
     // creates a new dashed array equal to the generated word length
     // array is made using default values (which are "\0" (null) characters )
     private static String dash = new String(new char[word.length()]).replace("\0", "_");
-
     protected static int lives=10;
     private final Messages messages = new Messages();
     public Scanner scanner = new Scanner(System.in);
+
+    public static void setLives(int lives) {
+        Commands.lives = lives;
+    }
 
     public void initiate() {
         messages.welcomeMessage();
@@ -71,7 +75,7 @@ public class Commands {
         if (input.contains("Y")) {
             initiate();
             word = generateWord();
-            lives = 10;
+            setLives(10);
             dash = new String(new char[word.length()]).replace("\0", "_");
         } else {
             System.out.println("!! See you later !!");
