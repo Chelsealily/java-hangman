@@ -11,7 +11,6 @@ public class Commands {
     protected static int lives = 10;
     private final Messages messages = new Messages();
     public Scanner scanner = new Scanner(System.in);
-    private boolean playAgain = false;
 
     public void initiate() {
         messages.welcomeMessage();
@@ -60,7 +59,6 @@ public class Commands {
         }
         if (dash.equals(word)) {
             System.out.println(".' Congrats! You win! The word was '. [ " + word + " ]");
-            playAgain = true;
             playAgain();
         }
     }
@@ -74,11 +72,9 @@ public class Commands {
             initiate();
             word = generateWord();
             lives = 10;
-            playAgain = false;
             dash = new String(new char[word.length()]).replace("\0", "_");
         } else {
             System.out.println("!! See you later !!");
-            return;
         }
 
     }

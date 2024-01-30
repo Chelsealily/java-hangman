@@ -1,15 +1,12 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Words {
 
     protected static ArrayList<String> words = new ArrayList<>();
-    private static final Random RANDOM = new Random();
 
-
-    static {
+    static  {
         words.add("BASHFUL");
         words.add("GOODNESS");
         words.add("TURNIP");
