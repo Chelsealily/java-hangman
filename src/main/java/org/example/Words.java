@@ -1,10 +1,10 @@
 package org.example;
-
 import java.util.ArrayList;
 
 public class Words {
 
     protected static ArrayList<String> words = new ArrayList<>();
+
 
     static  {
         words.add("BASHFUL");

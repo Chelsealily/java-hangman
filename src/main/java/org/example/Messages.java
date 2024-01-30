@@ -1,6 +1,5 @@
 package org.example;
 
-import static org.example.Commands.lives;
 import static org.example.Commands.word;
 
 public class Messages {
@@ -17,15 +16,15 @@ public class Messages {
 
             Commands commands = new Commands();
 
-            if (lives == 9) {
-                System.out.println("// Wrong guess, ["+ lives +"] lives left, try again!");
+            if (Commands.lives == 9) {
+                System.out.println("// Wrong guess, ["+ Commands.lives +"] lives left, try again!");
                 System.out.println();
                 System.out.println();
                 System.out.println("___|___");
                 System.out.println();
             }
-            if (lives == 8) {
-                System.out.println("// Wrong guess, ["+ lives +"] lives left, try again!");
+            if (Commands.lives == 8) {
+                System.out.println("// Wrong guess, ["+ Commands.lives +"] lives left, try again!");
                 System.out.println();
                 System.out.println("   |");
                 System.out.println("   |");
@@ -34,8 +33,8 @@ public class Messages {
                 System.out.println("   |");
                 System.out.println("___|___");
             }
-            if (lives == 7) {
-                System.out.println("// Wrong guess, ["+ lives +"] lives left, try again!");
+            if (Commands.lives == 7) {
+                System.out.println("// Wrong guess, ["+ Commands.lives +"] lives left, try again!");
                 System.out.println();
                 System.out.println("   ____________");
                 System.out.println("   |/");
@@ -45,8 +44,8 @@ public class Messages {
                 System.out.println("   | ");
                 System.out.println("___|___");
             }
-            if (lives == 6) {
-                System.out.println("// Wrong guess, ["+ lives +"] lives left, try again!");
+            if (Commands.lives == 6) {
+                System.out.println("// Wrong guess, ["+ Commands.lives +"] lives left, try again!");
                 System.out.println();
                 System.out.println("   ____________");
                 System.out.println("   |           |");
@@ -56,8 +55,8 @@ public class Messages {
                 System.out.println("   |");
                 System.out.println("___|___");
             }
-            if (lives == 5) {
-                System.out.println("// Wrong guess, ["+ lives +"] lives left, try again!");
+            if (Commands.lives == 5) {
+                System.out.println("// Wrong guess, ["+ Commands.lives +"] lives left, try again!");
                 System.out.println();
                 System.out.println("   ____________");
                 System.out.println("   |           |");
@@ -67,8 +66,8 @@ public class Messages {
                 System.out.println("   |");
                 System.out.println("___|___");
             }
-            if (lives == 4) {
-                System.out.println("// Wrong guess, ["+ lives +"] lives left, try again!");
+            if (Commands.lives == 4) {
+                System.out.println("// Wrong guess, ["+ Commands.lives +"] lives left, try again!");
                 System.out.println();
                 System.out.println("   ____________");
                 System.out.println("   |           |");
@@ -78,8 +77,8 @@ public class Messages {
                 System.out.println("   |");
                 System.out.println("___|___");
             }
-            if (lives == 3) {
-                System.out.println("// Wrong guess, ["+ lives +"] lives left, try again!");
+            if (Commands.lives == 3) {
+                System.out.println("// Wrong guess, ["+ Commands.lives +"] lives left, try again!");
                 System.out.println();
                 System.out.println("   ____________");
                 System.out.println("   |           |");
@@ -89,8 +88,8 @@ public class Messages {
                 System.out.println("   |");
                 System.out.println("___|___");
             }
-            if (lives == 2) {
-                System.out.println("// Wrong guess, ["+ lives +"] lives left, try again!");
+            if (Commands.lives == 2) {
+                System.out.println("// Wrong guess, ["+ Commands.lives +"] lives left, try again!");
                 System.out.println();
                 System.out.println("   ____________");
                 System.out.println("   |           |");
@@ -100,8 +99,8 @@ public class Messages {
                 System.out.println("   |          / ");
                 System.out.println("___|___");
             }
-            if (lives == 1) {
-                System.out.println("// Wrong guess, ["+ lives +"] lives left, try again!");
+            if (Commands.lives == 1) {
+                System.out.println("// Wrong guess, ["+ Commands.lives +"] lives left, try again!");
                 System.out.println();
                 System.out.println("   ____________");
                 System.out.println("   |           |");
@@ -111,7 +110,7 @@ public class Messages {
                 System.out.println("   |          / ");
                 System.out.println("___|___");
             }
-            if (lives == 0) {
+            if (Commands.lives == 0) {
                 System.out.println("GAME OVER!");
                 System.out.println("   ____________");
                 System.out.println("   |           |");

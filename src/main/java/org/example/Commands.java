@@ -3,12 +3,12 @@ import java.util.Scanner;
 import static org.example.Words.generateWord;
 
 public class Commands {
-
     protected static String word = generateWord();
     // creates a new dashed array equal to the generated word length
     // array is made using default values (which are "\0" (null) characters )
     private static String dash = new String(new char[word.length()]).replace("\0", "_");
-    protected static int lives = 10;
+
+    protected static int lives=10;
     private final Messages messages = new Messages();
     public Scanner scanner = new Scanner(System.in);
 
@@ -38,22 +38,22 @@ public class Commands {
     }
 
     private void logic(String guess) {
-        String newDash = "";
+        StringBuilder newDash = new StringBuilder();
         for (int i = 0; i < word.length(); i++) {
             if (word.toUpperCase().charAt(i) == guess.charAt(0)) {
-                newDash += guess.charAt(0);
+                newDash.append(guess.charAt(0));
             } else if (dash.charAt(i) != '_') {
-                newDash += word.charAt(i);
+                newDash.append(word.charAt(i));
             } else {
-                newDash += "_";
+                newDash.append("_");
             }
         }
 
-        if (dash.equals(newDash)) {
+        if (dash.contentEquals(newDash)) {
             lives--;
             messages.hangmanImage();
         } else {
-            dash = newDash;
+            dash = newDash.toString();
             System.out.println("* Good guess! Try another! *");
             System.out.println(" ");
         }
