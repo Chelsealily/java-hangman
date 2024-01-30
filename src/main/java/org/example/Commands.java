@@ -3,14 +3,15 @@ import java.util.Scanner;
 import static org.example.Words.generateWord;
 
 public class Commands {
+    private static final int MAX_LIVES = 10;
     protected static String word = generateWord();
 
     // creates a new dashed array equal to the generated word length
     // array is made using default values (which are "\0" (null) characters )
     private static String dash = new String(new char[word.length()]).replace("\0", "_");
-    protected static int lives=10;
-    private final Messages messages = new Messages();
-    public Scanner scanner = new Scanner(System.in);
+    protected static int lives=MAX_LIVES;
+    protected final Messages messages = new Messages();
+    protected Scanner scanner = new Scanner(System.in);
 
     public static void setLives(int lives) {
         Commands.lives = lives;
@@ -75,7 +76,7 @@ public class Commands {
         if (input.contains("Y")) {
             initiate();
             word = generateWord();
-            setLives(10);
+            setLives(MAX_LIVES);
             dash = new String(new char[word.length()]).replace("\0", "_");
         } else {
             System.out.println("!! See you later !!");
