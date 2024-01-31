@@ -25,11 +25,12 @@ public class Commands {
             System.out.println(dash);
             String guess = scanner.next().toUpperCase();
 
+            // stop symbol / number guesses and more than 1 character
+
             if (guess.length() != 1||!Character.isLetter(guess.charAt(0))) {
                 System.out.println("Please enter a valid single letter.");
                 continue;
             }
-
             char guessedLetter = guess.charAt(0);
 
             if (dash.contains(String.valueOf(guessedLetter))) {
